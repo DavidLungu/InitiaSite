@@ -33,6 +33,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
 }
 
 ul {
@@ -42,6 +47,10 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+a:active, a:visited, a:link {
+  text-decoration: none;
 }
 
 button {

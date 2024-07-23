@@ -2,7 +2,9 @@ import React from 'react'
 
 const Compete = () => {
   return (
-    <div>Compete</div>
+    <div className="compete-page">
+      
+    </div>
   )
 }
 

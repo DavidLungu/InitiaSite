@@ -1,0 +1,21 @@
+.home-page {
+  width: 100%;
+  height: 100vh;
+}
+
+.team-page {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  padding: 2rem;
+}
+
+.team-page > members {
+  display: flex;
+  flex-direction: column;
+}
+
