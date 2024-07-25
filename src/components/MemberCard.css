@@ -1,19 +1,7 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    min-height: 100vh;
-    overflow-x: hidden; /* Ensure no horizontal overflow */
-}
-
 .member-card {
     width: 80vw;
-    max-width: 1200px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 12px 20px 9px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 20px 20px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
@@ -27,40 +15,40 @@ body {
 @keyframes dropFadeIn {
     to {
         opacity: 1;
-        transform: translateY(0);
         transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
-.top, .middle, .bottom {
+.member-card__top, .member-card__middle, .member-card__bottom {
     opacity: 0;
     transform: translateY(-20px);
     animation: dropFadeIn 1s forwards;
     animation-delay: 0.35s;
-    width: 100%; /* Ensure it takes full width */
-    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.top {
+.member-card__top {
     background-color: #d4d4d4;
     padding: 1rem;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.middle {
+.member-card__middle {
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    width: 100%; /* Ensure it takes full width */
-    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    box-sizing: border-box;
     align-items: center;
 }
 
-.left {
+.member-card__left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,30 +56,30 @@ body {
     flex: 1;
     padding-right: 1rem;
     text-align: center;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
 }
 
-.right {
+.member-card__right {
     flex: 2;
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure spacing between top and bottom content */
-    height: 100%; /* Ensure full height */
-    box-sizing: border-box; /* Include padding in width */
-    position: relative; /* Needed for absolute positioning of the email */
+    justify-content: space-between; 
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
     width: 100%;
 }
 
-.bottom {
+.member-card__bottom {
     background-color: #f8f8f8;
     padding: 1rem;
     text-align: center;
     border-top: 2px solid #ddd;
-    width: 100%; /* Ensure it takes full width */
+    width: 100%;
 }
 
-.member__image {
+.member-card__image {
     width: 10vw;
     height: 10vw;
     max-width: 150px;
@@ -99,63 +87,65 @@ body {
     border-radius: 50%;
 }
 
-h1 {
+.member-card__name {
     font-size: calc(1.2rem + 0.5vw);
     margin: 0.5em 0;
 }
 
-p {
+.member-card__about {
     font-size: calc(0.8rem + 0.5vw);
     margin: 0.5em 0;
 }
 
-h2 {
+.member-card__role {
     font-size: calc(1rem + 0.5vw);
     margin: 0.5em 0;
 }
 
-h3 {
+.member-card__school {
     font-size: calc(0.75rem + 0.5vw);
     margin: 0.5em 0;
 }
 
-.right > a {
+.member-card__right > a {
     font-size: calc(0.65rem + 0.5vw);
     text-align: center;
     position: absolute;
-    bottom: 1rem; /* Anchor to the bottom */
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.right > a:active, a:visited, a:link {
+.member-card__email-link > a:active, 
+.member-card__email-link > a:visited, 
+.member-card__email-link > a:link {
     color: var(--base-colour-black);
     font-weight: 800;
 }
 
 @media (max-width: 768px) {
-    .left {
+    .member-card__left {
         padding-right: 0;
     }
     
-    .middle {
+    .member-card__middle {
         flex-direction: column;
         align-items: center;
         padding: 1rem 0;
         text-align: center;
     }
 
-    .right {
+    .member-card__right {
         align-items: center;
         padding-left: 0;
         border-top: 1px solid #ddd;
     }
 
-    .right > p {
+    .member-card__about {
         padding: 0.5rem;
     }
 
-    .right > .email-link {
+    .member-card__email-link {
         border-top: 1px solid #ddd;
         width: 100%;
         display: flex;
@@ -163,7 +153,7 @@ h3 {
         justify-content: center;
     }
 
-    .right > .email-link > a {
+    .member-card__email-link > a {
         position: relative;
         margin-top: 1rem;
         bottom: auto;
@@ -171,21 +161,21 @@ h3 {
         left: 0;
     }
 
-    .member__image {
+    .member-card__image {
         width: 20vw;
         height: 20vw;
         max-width: 120px;
         max-height: 120px;
     }
 
-    .top {
+    .member-card__top {
         padding: 0.5rem;
         height: auto;
-        white-space: normal; /* Allow text to wrap on smaller screens */
-        text-align: center; /* Center-align text for better readability */
+        white-space: normal;
+        text-align: center;
     }
 
-    h2 {
+    .member-card__role {
         font-size: calc(1rem + 1vw);
     }
 }

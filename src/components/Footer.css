@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 100%;
+    padding: 3rem 0;
+    background-color: var(--base-colour-dark);
+    color: var(--base-colour-white);
+
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.footer__left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo {
+    width: 70%;
+}
+
+.footer__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

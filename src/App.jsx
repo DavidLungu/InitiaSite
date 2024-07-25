@@ -1,7 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 import Home from './routes/Home.jsx';
 import Join from './routes/Join.jsx';
 import Compete from './routes/Compete.jsx';
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/solutions' element={<Solutions />} />
         <Route path='/team' element={<Team />} />
       </Routes>
+      <Footer />
     </>
   )
 }
