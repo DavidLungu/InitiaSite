@@ -1,20 +1,18 @@
 import React from 'react';
 import './InfoCard.css';
+import { Link } from 'react-router-dom';
 
 const InfoCard = (props) => {
-  const title = props.title;
-  const collaborator = props.collaborator;
-  const link = props.link;
-  const image = props.image;
+  const {title, collaborator, collabLink, image, competitionLink} = props;
 
   return (
     <div className="info-card">
         <h1 className="info-card__title">{title}</h1>
+        <img src={image} alt="" className="info-card__image" />
         <div className="info-card__collaborator">
-          In collaboration with: <a href={link} target='_blank' className="info-card__link">{collaborator}</a>
+          In collaboration with: <a href={collabLink} target='_blank' className="info-card__link">{collaborator}</a>
         </div>
-        <img src="" alt="" className="info-card__image" />
-        <button className="info-card__btn">More Information</button>
+        <Link to={competitionLink} className="info-card__btn">More Information</Link>
     </div>
   )
 }

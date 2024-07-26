@@ -6,29 +6,35 @@ const competingInfo = [
   {
     title: "Nutrition Challenge",
     collaborator: "Back2Basics Nutrition",
-    link: "https://back2basicsfxn.com/",
-    image: ""
+    collabLink: "https://back2basicsfxn.com/",
+    image: "src/assets/cards/nutritionchallenge.png",
+    competitionLink: "/competenutrition"
   },
   {
     title: "Innovative Medical Solutions",
     collaborator: "MeducationX",
-    link: "https://meducationx.org/",
-    image: ""
+    collabLink: "https://meducationx.org/",
+    image: "src/assets/cards/innovativemedicalsolutions.png",
+    competitionLink: "/competemedical"
   },
 ];
 
 const Compete = () => {
   return (
     <div className="compete-page">
-      compete
-      <div className="competing-cards">
+    <header className="compete-page__header">
+      <h1 className="compete-page__title">Explore Open Challenges</h1>
+      <h3 className="compete-page__description">Our open challenges are in partnership with various non-profits, communities, businesses, and organizations.</h3>
+    </header>
+    <div className="competing-cards">
         {competingInfo.map(info => (
           <InfoCard 
             key={uuidv4()}
             title={info.title}
             collaborator={info.collaborator}
-            link={info.link}
+            collabLink={info.collabLink}
             image={info.image}
+            competitionLink={info.competitionLink}
           />
         ))}
       </div>

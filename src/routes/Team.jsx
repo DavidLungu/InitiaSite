@@ -31,7 +31,7 @@ const Team = () => {
   return (
     <div className="team-page">
         {/* <p>Meet The Team</p> */}
-        <div className="members">
+        <div className="team-page__members">
             {members.map( member => (
                 <MemberCard 
                     key={uuidv4()}

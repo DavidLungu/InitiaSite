@@ -1,4 +1,10 @@
+.home-page {
+  min-height: 60vh;
+}
+
 .team-page {
+  min-height: 60vh;
+
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -8,24 +14,40 @@
   padding: 2rem;
 }
 
-.team-page > members {
+.team-page__members {
   display: flex;
   flex-direction: column;
 }
 
 .compete-page {
+  min-height: 60vh;
+
   display: flex;
   align-items: center;
   flex-direction: column;
 
   box-sizing: border-box;
-  min-height: 100vh;
+  text-align: center;
 }
+
+.compete-page__header {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.compete-page__description {
+  margin: 2rem 0 0 0;
+}
+
 
 .compete-page > .competing-cards {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  
   width: 100%;
 }
