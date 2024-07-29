@@ -1,6 +1,6 @@
 import React from 'react';
-import './InfoCard.css';
 import { Link } from 'react-router-dom';
+import './InfoCard.css';
 
 const InfoCard = (props) => {
   const {title, collaborator, collabLink, image, competitionLink} = props;

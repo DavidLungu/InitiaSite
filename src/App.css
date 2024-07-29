@@ -1,17 +1,30 @@
-.home-page {
+.page {
   min-height: 60vh;
 }
 
-.team-page {
-  min-height: 60vh;
+.page__header {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
 
+.page__description {
+  margin: 2rem 0 0 0;
+  white-space: pre-line;
+  width: 60vw;
+  text-align: center;
+}
+
+.team-page {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-
-  padding: 2rem;
+  flex-direction: column;
 }
 
 .team-page__members {
@@ -20,34 +33,81 @@
 }
 
 .compete-page {
-  min-height: 60vh;
-
   display: flex;
   align-items: center;
   flex-direction: column;
-
   box-sizing: border-box;
+}
+
+.compete-page__collaborator {
+  font-size: 1.25rem;
+  color: var(--base-colour-dark);
+  margin-top: 1rem;
   text-align: center;
 }
 
-.compete-page__header {
-  width: 100%;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.compete-page__link {
+  color: var(--accent-colour);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.compete-page__description {
-  margin: 2rem 0 0 0;
+.compete-page__link:hover {
+  text-decoration: underline;
 }
 
-
-.compete-page > .competing-cards {
+.compete-page__cards {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  
+  gap: 16px;
   width: 100%;
+  padding: 0 16px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: dropFadeIn 1s forwards;
+}
+
+.competition__cards {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 5rem;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: dropFadeIn 1s forwards;
+}
+
+@media (max-width: 1200px) {
+  .competition__cards {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .page__description {
+    max-width: 80vw;
+  }
+
+  .compete-page__cards,
+  .competition__cards {
+    padding: 0 2rem;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .page__description {
+    width: 90vw;
+  }
+
+  .compete-page__header {
+    padding: 1rem 0;
+  }
 }

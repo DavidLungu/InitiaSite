@@ -92,3 +92,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#hidden {
+  display: none;
+}
+
+@keyframes dropFadeIn {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+      transform: translateY(0);
+  }
+}

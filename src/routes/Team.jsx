@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import MemberCard from '../components/MemberCard.jsx';
@@ -29,8 +29,11 @@ const members = [
 
 const Team = () => {
   return (
-    <div className="team-page">
-        {/* <p>Meet The Team</p> */}
+    <div className="page team-page">
+        <header className="page__header">
+        <h1 className="page__title">Meet The Team</h1>
+        </header>
+
         <div className="team-page__members">
             {members.map( member => (
                 <MemberCard 
@@ -47,4 +50,4 @@ const Team = () => {
   )
 }
 
-export default Team
+export default Team;
