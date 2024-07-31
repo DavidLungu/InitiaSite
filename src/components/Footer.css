@@ -7,7 +7,8 @@
     padding: 3rem 0;
     background-color: var(--base-colour-dark);
     color: var(--base-colour-white);
-
+    position: absolute;
+    z-index: 10;
 }
 
 .footer__row {

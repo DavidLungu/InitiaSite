@@ -8,10 +8,11 @@
     background-color: var(--base-colour-dark);
     position: relative;
     top: 0;
+    z-index: 10;
 }
 
 .navbar__logo {
-    height: 85%;
+    height: 75%;
 }
 
 .navbar__list {

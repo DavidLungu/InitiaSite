@@ -10,6 +10,9 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+
+  opacity: 0;
+  animation: dropFadeIn 1.25s forwards;
 }
 
 .page__description {
@@ -17,6 +20,81 @@
   white-space: pre-line;
   width: 60vw;
   text-align: center;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-page__title {
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  background-color: var(--base-colour-blue);
+  color: var(--base-colour-white);
+  opacity: 0;
+  animation: dropFadeIn 2s forwards;
+  transform: translateX(-20px);
+}
+
+.home-page__banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.home-page__banner-left, .home-page__banner-right {
+  flex: 1;
+  padding: 20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: dropFadeIn 1s forwards;
+}
+
+.home-page__banner-left {
+  display: flex;
+  justify-content: center;
+}
+
+.home-page__image {
+  width: 75%;
+}
+
+.home-page__banner-title {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.home-page__banner-text {
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.home-page__banner-btn {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--base-colour-blue);
+  color: var(--base-colour-white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-page__banner-btn:hover {
+  background-color: var(--base-colour-lgt-blue);
 }
 
 .team-page {
@@ -89,22 +167,55 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .page__description {
     max-width: 80vw;
+  }
+
+  .home-page {
+    padding: 0 20px 20px 20px;
+  }
+
+  .home-page__title {
+    opacity: 0;
+    animation: dropFadeIn 1s forwards;
+    transform: translateY(-20px);
+    
+    width: calc(100% - 1.55rem);
+  }
+
+  .home-page__banner {
+    flex-direction: column;
+  }
+
+  .home-page__image {
+    width: 100%;
   }
 
   .compete-page__cards,
   .competition__cards {
     padding: 0 2rem;
   }
-
-
 }
 
 @media (max-width: 480px) {
   .page__description {
     width: 90vw;
+  }
+
+  .home-page__title {
+    font-size: 1.15rem;
+    padding: 1.25rem;
+    
+    width: 100%;
+  }
+
+  .home-page__banner-title {
+    font-size: 1.5rem;
+  }
+
+  .home-page__banner-text {
+    font-size: 1rem;
   }
 
   .compete-page__header {
