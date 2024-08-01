@@ -12,7 +12,7 @@ const InfoCard = (props) => {
         <div className="info-card__collaborator">
           In collaboration with: <a href={collabLink} target='_blank' className="info-card__link">{collaborator}</a>
         </div>
-        <Link to={competitionLink} className="info-card__btn">More Information</Link>
+        <Link to={competitionLink} className="link-btn">More Information</Link>
     </div>
   )
 }

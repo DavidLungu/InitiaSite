@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './Home.css';
+
 const Home = () => {
   return (
     <div className="page home-page">
@@ -17,7 +19,7 @@ const Home = () => {
           <p className="home-page__banner-text">
             Initia is a non-profit organization striving to make change in our community. We host recurring competitions that aim to solve problems around us, which are catered towards various fields from engineering, to medical, to business. We ensure that each person is given the opportunity to contribute their skill sets to Initia's movement. 
           </p>
-          <Link to='/join' className="home-page__banner-btn">Explore Open Competitions</Link>
+          <Link to='/join' className="link-btn">Explore Open Competitions</Link>
         </div>
       </div>
 

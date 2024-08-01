@@ -1,6 +1,6 @@
 .navbar {
     width: 100vw; 
-    height: 16vh;
+    height: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .navbar__logo {
-    height: 75%;
+    height: 120px;
 }
 
 .navbar__list {

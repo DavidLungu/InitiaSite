@@ -7,7 +7,9 @@ import './Navbar.css';
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <img src={Logo} alt="Initia Logo" className="navbar__logo" />
+            <Link to="./">
+                <img src={Logo} alt="Initia Logo" className="navbar__logo" />
+            </Link>
             <ul className="navbar__list">
                 <li className="navbar__item"><Link to='/' className="navbar__link">Home</Link></li>
                 <li className="navbar__item"><Link to='/join' className="navbar__link">Join</Link></li>
