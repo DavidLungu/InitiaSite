@@ -1,46 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import CompetitionCard from '../components/CompetitionCard';
 
-const nutritionCards = [
-  {
-    title: "Task",
-    image: './cards/nutritioncomp-task.png',
-    description: "Write a blog/recipe containing a detailed exposition of how to structure your meal, or come up with a healthy nutrient-dense recipe—whether it’s a breakfast, lunch, dinner, or dessert item. The item must be both appetizing and healthy. A team will only pick one of these topics and write a well-developed piece."
-  }, 
-  {
-    title: "Submission",
-    image: './cards/competition-submission.png',
-    description: "Competitors are to write a  blog/recipe on the given prompt. This written piece must be a minimum of 2000 words. Competitors also have the option of submitting a supplemental video (optional) as well as the paper."
-  }, 
-  {
-    title: "Awards",
-    image: './cards/competition-awards.png',
-    description: "1st Place - 50 Service Hours + Potential feature on the <link1>Back2Basics<link1/> Website\n2nd Place - 45 Service Hours\n3rd Place - 40 Service Hours\n4th Place - 30 Service Hours\n5th Place - 20 Service Hours",
-    link1: 'https://back2basicsfxn.com/'
-  },  
-  {
-    title: "Team",
-    image: './cards/competition-team.png',
-    description: "Submissions are to be done as a team. Each team will consist of 2-6 members."
-  },  
-  {
-    title: "Judges",
-    image: './cards/competition-judges.png',
-    description: "Submissions will be judged by Niti Shah. With her background in Nutrition, she'll handpick the best submissions."
-  },  
-  {
-    title: "Guidelines & Rubric",
-    image: './cards/competition-rubric.png',
-    description: "Submissions are to follow the <link1>Rules & Guidelines</link1>, and will be judged according to <link2>This Rubric</link2>.",
-    link1: 'https://docs.google.com/document/d/1JYNIXJ2KYk8Cpb_E0VshbDGqg8aztEJopAucTEg0f3E/edit',
-    link2: 'https://docs.google.com/document/d/1JYNIXJ2KYk8Cpb_E0VshbDGqg8aztEJopAucTEg0f3E/edit'
-  },
-] 
 
 const CompeteNutrition = () => {
+  const [nutritionCards, setNutritionCards] = useState([]);
+  const [competitionInfo, setCompetitionInfo] = useState([]);
+
+  useEffect(() => {
+    fetch('./data/competitioninfo.json')
+    .then(res => res.json())
+    .then (data => { 
+      data.forEach(info => {
+        if (info.competitionName == 'Nutrition Challenge') {
+          setCompetitionInfo(info); 
+        }
+      });
+    })
+    .catch(error => console.error("Error fetching competition info:", error))
+  },[]);
+
+  useEffect(() => {
+    fetch('./data/nutritioncards.json')
+    .then(res => res.json())
+    .then(data => setNutritionCards(data))
+    .catch(error => console.error('Error fetching nutrition cards:', error))
+  },[]);
+
   return (
-    <div className="page compete-page__nutrition">
+    <div className="page compete-page__challenge">
       <header className="page__header">
         <h1 className="page__title">Nutrition Competition</h1>
         {/* <h3 className="page__description">
@@ -64,6 +53,8 @@ const CompeteNutrition = () => {
           />
         ))}
       </div>
+      <h2 className="competition__deadline">Deadline is <span>{competitionInfo.competitionDeadline}</span></h2>
+      <Link to={competitionInfo.submissionLink} target="_blank" className='compete-page__submit-btn link-btn'>Submit Solution</Link>
     </div>
   )
 }

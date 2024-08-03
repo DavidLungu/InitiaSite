@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Nutrition Challenge",
+      "collaborator": "Back2Basics Nutrition",
+      "collabLink": "https://back2basicsfxn.com/",
+      "image": "src/assets/cards/nutritionchallenge.png",
+      "competitionLink": "/competenutrition"
+    },
+    {
+      "title": "Innovative Medical Solutions",
+      "collaborator": "MeducationX",
+      "collabLink": "https://meducationx.org/",
+      "image": "src/assets/cards/innovativemedicalsolutions.png",
+      "competitionLink": "/competemeducation"
+    }
+  ]
+  

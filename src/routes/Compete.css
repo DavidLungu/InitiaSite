@@ -1,8 +1,15 @@
 .compete-page {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
+  }
+
+  .compete-page__challenge {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
   .compete-page__collaborator {
@@ -20,6 +27,21 @@
   
   .compete-page__link:hover {
     text-decoration: underline;
+  }
+
+  .competition__deadline
+  {
+    margin: 2rem 0 1.5rem 0;
+  }
+
+  .competition__deadline > span {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .compete-page__submit-btn {
+    margin: 0rem 0 5rem 0;
+    
   }
   
   .compete-page__cards {

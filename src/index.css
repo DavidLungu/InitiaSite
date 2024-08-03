@@ -17,6 +17,12 @@
   --button-text-colour: #ffffff;
   --button-hover-colour: #333333;
 
+  --navbar-height: 12vh;
+  --footer-height: 12vh;
+
+  --navbar-height-mb: 18vh;
+  --footer-height-mb: 12vh;
+
   color-scheme: light dark;
   color: var(--text-colour-dark);
   background-color: var(--base-colour-white);
@@ -33,14 +39,14 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: #e9e9e9;
+  background-color: var(--base-colour-white);
   height: 100%;
   width: 100%;
   overflow-x: hidden;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3rem;
   line-height: 1.1;
   margin: 0;
 }
@@ -95,7 +101,7 @@ button:focus-visible {
   }
 }
 
-#hidden {
+.hidden {
   display: none;
 }
 

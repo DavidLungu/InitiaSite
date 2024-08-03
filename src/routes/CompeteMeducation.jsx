@@ -1,43 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import CompetitionCard from '../components/CompetitionCard';
 
-const meducationCards = [
-  {
-    title: "Task",
-    image: './cards/meducationcomp-task.png',
-    description: "Participants must create an innovative medical solution that can be used to combat some sort of difficulty in the medical field."
-  },
-  {
-    title: "Submission",
-    image: './cards/competition-submission.png',
-    description: "Competitors are to write a research paper on the given prompt. This written piece must be a minimum of 2000 words. "
-  },
-  {
-    title: "Awards",
-    image: './cards/competition-awards.png',
-    description: "1st Place - 50 Service Hours\n2nd Place - 40 Service Hours\n3rd Place - 30 Service Hours"
-  },
-  {
-    title: "Team",
-    image: './cards/competition-team.png',
-    description: "Submissions are to be done as a team. Each team will consist of 2-6 members. "
-  },
-  {
-    title: "Judges",
-    image: './cards/competition-judges.png',
-    description: "Submissions will be judged by college ​professors in the respective field. More information will be ​available soon."
-  },
-  {
-    title: "Guidelines & Rubric",
-    image: './cards/competition-rubric.png',
-    description: "Submissions are to follow the <link1>Rules & Guidelines</link1>, and will be judged according to <link2>This Rubric</link2>."
-  },
-]
-
 const CompeteMeducation = () => {
+  const [meducationCards, setMeducationCards] = useState([]);
+  const [competitionInfo, setCompetitionInfo] = useState([]);
+
+  useEffect(() => {
+    fetch('./data/competitioninfo.json')
+    .then(res => res.json())
+    .then (data => { 
+      data.forEach(info => {
+        if (info.competitionName == 'MeducationX Challenge') {
+          setCompetitionInfo(info); 
+        }
+      });
+    })
+    .catch(error => console.error("Error fetching competition info:", error))
+  },[]);
+
+  useEffect(() => {
+    fetch('./data/meducationcards.json')
+    .then(res => res.json())
+    .then(data => setMeducationCards(data))
+    .catch(error => console.error('Error fetching meducation cards:', error))
+  },[]);
+
   return (
-    <div className="page compete-page__meducation">
+    <div className="page compete-page__challenge">
       <header className="page__header">
         <h1 className="page__title">MeducationX Competition</h1>
         {/* <h3 className="page__description">
@@ -61,6 +52,8 @@ const CompeteMeducation = () => {
           />
         ))}
       </div>
+      <h2 className="competition__deadline">Deadline is <span>{competitionInfo.competitionDeadline}</span></h2>
+      <Link to={competitionInfo.submissionLink} className='compete-page__submit-btn link-btn'>Submit Solution</Link>
     </div>
   )
 }

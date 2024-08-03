@@ -55,7 +55,6 @@
     padding: 1rem 1.5rem;
 }
 
-/* Media Queries for mobile responsiveness */
 @media (max-width: 768px) {
     .solution-card {
         flex-direction: column;

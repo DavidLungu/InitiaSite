@@ -1,6 +1,11 @@
 import React from 'react';
+import { FaDiscord, FaInstagram, FaLocationDot, FaSchool } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 import Logo from '../assets/Initia-General_Logo-Full_2023-09-04_22.38.18.png';
+
 import './Footer.css';
+
+
 
 const Footer = () => {
     return (
@@ -10,8 +15,9 @@ const Footer = () => {
                     <img src={Logo} alt="Initia Logo" className="footer__logo" />
                 </div>
                 <div className="footer__right">
-                    <a href='https://schools.friscoisd.org/campus/high-school/lone-star/home'>Lone Star High School</a>
-                    <p>Socials</p>
+                    <Link to='https://schools.friscoisd.org/campus/high-school/lone-star/home'><FaSchool/></Link>
+                    <Link to="https://www.instagram.com/initia.club/"><FaInstagram /></Link>
+                    <Link to="https://discord.gg/aNMqpFTrY7"><FaDiscord /></Link>
                 </div>
             </div>
         </footer>
