@@ -17,10 +17,10 @@
   --button-text-colour: #ffffff;
   --button-hover-colour: #333333;
 
-  --navbar-height: 12vh;
+  --navbar-height: 8vh;
   --footer-height: 12vh;
 
-  --navbar-height-mb: 18vh;
+  --navbar-height-mb: 10vh;
   --footer-height-mb: 12vh;
 
   color-scheme: light dark;

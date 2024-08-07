@@ -1,24 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Logo from '../assets/Initia-General_Logo-Full_2023-09-04_22.38.18.png';
 import './Navbar.css';
 
-const Navbar = () => {
+const DesktopNavbar = () => {
     return (
-        <nav className="navbar">
+        <nav className="desktop-navbar">
             <Link to="./">
-                <img src={Logo} alt="Initia Logo" className="navbar__logo" />
+                <img src={Logo} alt="Initia Logo" className="desktop-navbar__logo" />
             </Link>
-            <ul className="navbar__list">
-                <li className="navbar__item"><Link to='/' className="navbar__link">Home</Link></li>
-                <li className="navbar__item"><Link to='/join' className="navbar__link">Join</Link></li>
-                <li className="navbar__item"><Link to='/compete' className="navbar__link">Compete</Link></li>
-                <li className="navbar__item"><Link to='/solutions' className="navbar__link">Solutions</Link></li>
-                <li className="navbar__item"><Link to='/team' className="navbar__link">Team</Link></li>
+            <ul className="desktop-navbar__list">
+                <li className="desktop-navbar__item"><Link to='/' className="desktop-navbar__link">Home</Link></li>
+                <li className="desktop-navbar__item"><Link to='/join' className="desktop-navbar__link">Join</Link></li>
+                <li className="desktop-navbar__item"><Link to='/compete' className="desktop-navbar__link">Compete</Link></li>
+                <li className="desktop-navbar__item"><Link to='/solutions' className="desktop-navbar__link">Solutions</Link></li>
+                <li className="desktop-navbar__item"><Link to='/team' className="desktop-navbar__link">Team</Link></li>
             </ul>
         </nav>
     );
 }
 
-export default Navbar;
+export default DesktopNavbar;

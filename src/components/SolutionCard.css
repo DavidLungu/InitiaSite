@@ -5,7 +5,8 @@
     margin-bottom: 1rem;
     padding: 1.5rem 2rem;
     height: 6rem;
-
+    
+    background-color: var(--base-colour-white);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 
@@ -16,7 +17,6 @@
 .solution-card__left {
     display: flex;
     margin-right: 2rem;
-
 }
 
 .solution-card__left > img{
@@ -48,7 +48,6 @@
     opacity: 0;
     transform: translateY(-20px);
     animation: dropFadeIn 1s forwards;
-
 }
 
 .solution-card__right > .link-btn{
@@ -75,10 +74,6 @@
 
     .solution-card__mid {
         margin-bottom: 1rem;
-    }
-
-    .solution-section__title {
-        text-align: center;
     }
 
     .solution-card__solution-authors,

@@ -19,6 +19,7 @@
     margin-bottom: 1rem;
     opacity: 0;
     animation: dropFadeIn 1.25s forwards;
+    text-align: center;
 }
 
 .solution-page__solution-section {

@@ -10,7 +10,7 @@ const SolutionCard = (props) => {
   return (
     <div className="solution-card">
         <div className="solution-card__left">
-          <img src={`./school-icons/${solutionSchool.split(' ').join('')}.png`} alt="Img" />
+          <img src={`./school-icons/${solutionSchool.split(' ').join('')}.png`} alt="school img" />
         </div>
         <div className="solution-card__mid">
           <h2 className="solution-card__solution-name">{solutionName}</h2>

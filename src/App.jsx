@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Footer from './components/Footer.jsx';
+import MobileNavbar from './components/MobileNavbar.jsx';
 import Navbar from './components/Navbar.jsx';
 import Compete from './routes/Compete.jsx';
 import CompeteMeducation from './routes/CompeteMeducation.jsx';
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <MobileNavbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/join' element={<Join />} />

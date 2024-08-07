@@ -1,6 +1,7 @@
 .page {
   min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
   max-width: 100vw;
+  padding: 2rem;
 }
 
 .page__header {
@@ -14,6 +15,10 @@
 
   opacity: 0;
   animation: dropFadeIn 1.25s forwards;
+}
+
+.page__header > h1 {
+  text-transform: uppercase;
 }
 
 .page__description {
@@ -41,17 +46,16 @@
   background-color: var(--base-colour-lgt-blue);
 }
 
-.team-page {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.team-page__members {
-  display: flex;
-  flex-direction: column;
+.overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--base-colour-dark);
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

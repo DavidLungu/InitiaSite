@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 import MemberCard from '../components/MemberCard.jsx';
 
+import './Team.css';
+
 const Team = () => {
     const [members, setMembers] = useState([]);
 
