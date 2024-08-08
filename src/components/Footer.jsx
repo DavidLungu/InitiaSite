@@ -12,7 +12,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__row">
                 <div className="footer__left">
-                    <img src={Logo} alt="Initia Logo" className="footer__logo" />
+                    <Link to='/'><img src={Logo} alt="Initia Logo" className="footer__logo" /></Link>
                 </div>
                 <div className="footer__right">
                     <Link to='https://schools.friscoisd.org/campus/high-school/lone-star/home'><FaSchool/></Link>

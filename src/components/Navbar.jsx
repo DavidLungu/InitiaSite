@@ -6,7 +6,7 @@ import Logo from '/InitiaLogo.png';
 const DesktopNavbar = () => {
     return (
         <nav className="desktop-navbar">
-            <Link to="./">
+            <Link to="/">
                 <img src={Logo} alt="Initia Logo" className="desktop-navbar__logo" />
             </Link>
             <ul className="desktop-navbar__list">

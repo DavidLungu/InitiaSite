@@ -17,9 +17,12 @@
       z-index: 10;
   }
 
+  .mobile-navbar > a{
+    height: 100%;
+  }
+
   .navbar__logo {
-      height: 80px;
-      margin: 10px;
+    height: 100%;
   }
 
   .mobile-menu {

@@ -12,8 +12,12 @@
     z-index: 10;
 }
 
+.desktop-navbar > a {
+    height: 100%;
+}
+
 .desktop-navbar__logo {
-    height: 120px;
+    height: 100%;
 }
 
 .desktop-navbar__list {

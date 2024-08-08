@@ -30,6 +30,7 @@
 
 .request-page__container-title {
   text-align: center;
+  text-decoration: underline;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
@@ -65,6 +66,8 @@
   font-size: 14px;
   background-color: var(--base-colour-white);
   border-radius: 0.75rem;
+  color: var(--base-colour-dark);
+  font-family: "Montserrat", "Open Sans", sans-serif, Inter, system-ui, Avenir, Helvetica, Arial;
 }
 
 .styled-textarea {
