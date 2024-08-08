@@ -8,7 +8,7 @@ const Compete = () => {
   const [challengeInfoCards, setChallengeInfoCards] = useState([]);
 
   useEffect(() => {
-    fetch('./data/challengeinfocards.json')
+    fetch('src/assets/data/challengeinfocards.json')
     .then(res => res.json())
     .then(data => setChallengeInfoCards(data))
     .catch(error => console.error('Error fetching challenge info cards:', error))

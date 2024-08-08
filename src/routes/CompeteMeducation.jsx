@@ -8,7 +8,7 @@ const CompeteMeducation = () => {
   const [competitionInfo, setCompetitionInfo] = useState([]);
 
   useEffect(() => {
-    fetch('./data/competitioninfo.json')
+    fetch('src/assets/data/competitioninfo.json')
     .then(res => res.json())
     .then (data => { 
       data.forEach(info => {
@@ -21,7 +21,7 @@ const CompeteMeducation = () => {
   },[]);
 
   useEffect(() => {
-    fetch('./data/meducationcards.json')
+    fetch('src/assets/data/meducationcards.json')
     .then(res => res.json())
     .then(data => setMeducationCards(data))
     .catch(error => console.error('Error fetching meducation cards:', error))

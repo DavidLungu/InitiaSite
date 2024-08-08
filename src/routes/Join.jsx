@@ -10,7 +10,7 @@ const Join = () => {
   const [intiaSchoolCards, setInitiaSchoolCards] = useState([]);
 
   useEffect(() => {
-    fetch('./data/initiaschoolcards.json')
+    fetch('src/assets/data/initiaschoolcards.json')
     .then(res => res.json())
     .then(data => setInitiaSchoolCards(data))
     .catch(error => console.error('Error fetching initia school cards:', error))

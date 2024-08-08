@@ -13,6 +13,7 @@ import Solutions from './routes/Solutions.jsx';
 import Team from './routes/Team.jsx';
 
 import './App.css';
+import Request from './routes/Request.jsx';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/join' element={<Join />} />
+        <Route path='/request' element={<Request />} />
         <Route path='/compete' element={<Compete />} />
         <Route path='/competenutrition' element={<CompeteNutrition />} />
         <Route path='/competemeducation' element={<CompeteMeducation />} />
