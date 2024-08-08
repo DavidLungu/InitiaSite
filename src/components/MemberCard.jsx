@@ -16,7 +16,7 @@ const MemberCard = (props) => {
             </div>
             <div className="member-card__middle">
                 <div className="member-card__left">
-                    <img className="member-card__image" src={`src/assets/members/${name.split(' ').join('')}.png`} alt="" />
+                    <img className="member-card__image" src={`/members/${name.split(' ').join('')}.png`} alt="" />
                     <h1 className="member-card__name">{name}</h1>
                     <h3 className="member-card__school">{school}</h3>
                 </div>

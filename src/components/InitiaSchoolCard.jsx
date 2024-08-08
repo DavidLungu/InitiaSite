@@ -9,7 +9,7 @@ const InitiaSchoolCard = (props) => {
   return (
     <div className="school-card">
         <div className="school-card__left">
-          <img src={`src/assets/school-icons/${schoolName.split(' ').join('')}.png`} alt="school icon" />
+          <img src={`/school-icons/${schoolName.split(' ').join('')}.png`} alt="school icon" />
         </div>
         <div className="school-card__mid">
           <h2 className="school-card__school-name">{schoolName}</h2>

@@ -9,7 +9,7 @@ const Solutions = () => {
   const [solutionCards, setSolutionCards] = useState([]);
 
   useEffect(() => {
-    fetch('src/assets/data/solutioncards.json')
+    fetch('/data/solutioncards.json')
     .then(res => res.json())
     .then(data => setSolutionCards(data))
     .catch(error => console.error('Error fetching solution cards:', error))

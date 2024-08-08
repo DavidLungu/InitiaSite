@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Initia-General_Logo-Full_2023-09-04_22.38.18.png';
 import './Navbar.css';
+import Logo from '/InitiaLogo.png';
 
 const DesktopNavbar = () => {
     return (

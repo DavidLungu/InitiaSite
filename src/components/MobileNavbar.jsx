@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Initia-General_Logo-Full_2023-09-04_22.38.18.png';
 import './MobileNavbar.css';
+import Logo from '/InitiaLogo.png';
 
 const MobileNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ const MobileNavbar = () => {
 
   return (
       <nav className="mobile-navbar">
-          <Link to="./">
+          <Link to="/">
               <img src={Logo} alt="Initia Logo" className="navbar__logo" />
           </Link>
           <div className="mobile-menu">

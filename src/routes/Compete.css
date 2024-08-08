@@ -16,6 +16,7 @@
     color: var(--base-colour-dark);
     margin-top: 1rem;
     text-align: center;
+    text-transform: none;
   }
   
   .compete-page__link {

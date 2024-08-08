@@ -10,7 +10,7 @@ const Join = () => {
   const [intiaSchoolCards, setInitiaSchoolCards] = useState([]);
 
   useEffect(() => {
-    fetch('src/assets/data/initiaschoolcards.json')
+    fetch('/data/initiaschoolcards.json')
     .then(res => res.json())
     .then(data => setInitiaSchoolCards(data))
     .catch(error => console.error('Error fetching initia school cards:', error))
@@ -38,7 +38,7 @@ const Join = () => {
             If your school currently does not have an active chapter of Initia running, 
             you can fill out the application to start a chapter yourself.
           </p>
-          <Link to='' className="link-btn join-button">Become a chapter lead</Link>
+          <Link to='/request' className="link-btn join-button">Become a chapter lead</Link>
         </div>
       </section>
       <section className="school-cards__container">

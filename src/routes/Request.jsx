@@ -8,7 +8,7 @@ const Request = () => {
         <h1 className="page__title">Bring Initia to your School</h1>
       </header>
       <div className="request-page__container">
-        <img src="src/assets/Initia-General_Web_2023-09-04_19.28.05.png" alt="School Icon" />
+        <img src="/SchoolClipartBG.png" alt="School Icon" />
         <form className='leader-submission__form'>
           <h2 className="request-page__container-title">Send a Request</h2>
           <p className="request-page__container-description">Enter your credentials to request to start an Initia Chapter at your High School. You will receive an email back in 2-5 business days. If you are decided to be a good candidate, you will then interview a member of the Board of Directors.</p>
