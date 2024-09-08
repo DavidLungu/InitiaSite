@@ -19,6 +19,7 @@ const Join = () => {
 
   return (
     <div className="page join-page">
+      {console.log(document.documentElement.clientHeight)}
       <div className="page__header">
         <h1 className="page__title">Join Initia at your school!</h1>
       </div>

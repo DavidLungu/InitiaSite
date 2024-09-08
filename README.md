@@ -1,5 +1,28 @@
-# Initia Website
+# Initia Website 🌐
 
+## 🚀 Getting Started
+
+Follow these steps to get the project running locally.
+
+### Prerequisites
+
+- Node.js >= 14.x
+- NPM >= 6.x
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/davidlungu/initia-website.git
+cd initia-website
+npm install
 ```
-npm install dompurify@^3.1.6 react@^18.3.1 react-dom@^18.3.1 react-icons@^5.2.1 react-router-dom@^6.25.1 uuidv4@^6.2.13
+
+### Running Locally
+To run the development server:
+
+```bash
+npm start
 ```
+Navigate to http://localhost:3000 in your browser to view the website.
